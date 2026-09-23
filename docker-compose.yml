@@ -1,0 +1,36 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: postgres
+      # Local development only. Change it for any shared environment.
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
+      POSTGRES_DB: property_listing
+    ports:
+      - "${DB_PORT:-5432}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d property_listing"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgres://postgres:${POSTGRES_PASSWORD:-postgres}@db:5432/property_listing
+      PORT: 3000
+      # Comma-separated keys for write endpoints. Set API_KEYS in your shell or a .env file.
+      API_KEYS: ${API_KEYS:-}
+      CORS_ORIGIN: ${CORS_ORIGIN:-*}
+      RATE_LIMIT_MAX: ${RATE_LIMIT_MAX:-100}
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+    ports:
+      - "${API_PORT:-3000}:3000"
+
+volumes:
+  pgdata:

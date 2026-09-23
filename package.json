@@ -1,0 +1,62 @@
+{
+  "name": "property-listing-api",
+  "version": "0.1.0",
+  "description": "Open-source real estate listing API with search, filters and map support (Fastify, TypeScript, PostgreSQL + PostGIS).",
+  "license": "MIT",
+  "author": "CalliArc (https://www.calliarc.com)",
+  "type": "module",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calliarc/property-listing-api.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "start": "node dist/server.js",
+    "migrate": "tsx src/db/migrate.ts",
+    "seed": "tsx src/db/seed.ts",
+    "migrate:prod": "node dist/db/migrate.js",
+    "seed:prod": "node dist/db/seed.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:unit": "vitest run test/unit",
+    "test:integration": "vitest run test/integration",
+    "db:lite": "node scripts/pglite-server.mjs"
+  },
+  "keywords": [
+    "real-estate",
+    "property",
+    "listings",
+    "api",
+    "fastify",
+    "postgis",
+    "geo-search",
+    "openapi"
+  ],
+  "dependencies": {
+    "@fastify/cors": "^11.3.0",
+    "@fastify/helmet": "^13.1.1",
+    "@fastify/rate-limit": "^11.2.0",
+    "@fastify/swagger": "^9.9.0",
+    "@fastify/swagger-ui": "^6.1.1",
+    "@fastify/type-provider-typebox": "^6.1.0",
+    "fastify": "^5.12.5",
+    "pg": "^8.23.0",
+    "typebox": "^1.3.34"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@electric-sql/pglite-postgis": "^0.2.8",
+    "@electric-sql/pglite-socket": "^0.2.11",
+    "@types/node": "^22.10.0",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
+  }
+}
