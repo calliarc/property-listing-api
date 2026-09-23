@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 # Property Listing API
 
 Open-source real estate listing API with search, filters and map support.
-=======
-# Next.js SEO Kit
-
-Correct canonicals, sitemaps, redirects and www/trailing-slash handling for Next.js.
->>>>>>> c71cf78cc7efbd03637d3a044cd0f0516ec170f2
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 ![Status: in development](https://img.shields.io/badge/status-in%20development-orange)
@@ -15,7 +9,6 @@ Correct canonicals, sitemaps, redirects and www/trailing-slash handling for Next
 
 ## Features
 
-<<<<<<< HEAD
 - CRUD for listings, agents and media
 - Search by price, beds, baths, property type and status
 - Geo search: radius, bounding box and polygon
@@ -29,20 +22,6 @@ Correct canonicals, sitemaps, redirects and www/trailing-slash handling for Next
 - Fastify
 - PostgreSQL + PostGIS
 - OpenAPI
-=======
-- One site-URL config used by canonicals, sitemap and Open Graph tags
-- Helpers that always generate absolute canonical URLs
-- Redirect presets for www/non-www and trailing slashes
-- Guards against doubled paths such as /example.com/page
-- Sitemap and robots.txt generation
-- JSON-LD helpers for Organization, Breadcrumb and Article
-
-## Tech stack
-
-- TypeScript
-- Next.js (App Router)
-- npm package
->>>>>>> c71cf78cc7efbd03637d3a044cd0f0516ec170f2
 
 ## Getting started
 

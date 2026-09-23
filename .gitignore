@@ -13,13 +13,10 @@ yarn-error.log*
 pnpm-debug.log*
 .vercel/
 
-<<<<<<< HEAD
 # Local Docker data
 data/
 volumes/
 
-=======
->>>>>>> c71cf78cc7efbd03637d3a044cd0f0516ec170f2
 # Environment & secrets
 .env
 .env.*
