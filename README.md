@@ -2,9 +2,10 @@
 
 Open-source real estate listing API with search, filters and map support.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-![Version: 0.1.0](https://img.shields.io/badge/version-0.1.0-blue)
 [![CI](https://github.com/calliarc/property-listing-api/actions/workflows/ci.yml/badge.svg)](https://github.com/calliarc/property-listing-api/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/calliarc/property-listing-api?include_prereleases&sort=semver)](https://github.com/calliarc/property-listing-api/releases)
+[![Built by CalliArc](https://img.shields.io/badge/built%20by-CalliArc-0a66c2)](https://www.calliarc.com/)
 
 > **Status:** v0.1.0, the first working release. The API is usable but may still change before 1.0.
 
@@ -199,6 +200,10 @@ Have an idea? [Open an issue](https://github.com/calliarc/property-listing-api/i
 ## Contributing
 
 Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
